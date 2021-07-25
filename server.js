@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 const shortUrl = require("./models/short.js");
 
-mongoose.connect("mongodb://localhost/family2", {
+mongoose.connect("mongodb+srv://myfamily:family11@family.7usbg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -29,6 +29,4 @@ app.post("/", async(req, res) => {
 });
 
 
-app.listen(process.env.PORT || 8080, () => {
-    console.log("Server is running at 8080");
-});
+app.listen(process.env.PORT || 8080);
